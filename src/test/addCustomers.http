@@ -1,0 +1,121 @@
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection).
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET logRequest with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST logRequest with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST logRequest to submit a form with a text or file field (multipart/form-data);
+
+PUT http://127.0.0.1:8080/customers/new
+Authorization: Basic {{username}} {{password}}
+Content-Type: application/json
+
+{
+  "firstName": "Tom",
+  "lastName": "Smith",
+  "birthday": "1991-04-02",
+  "email" : "ts@example.com",
+  "username" : "tsmith",
+  "zipcode" : 21029
+
+}
+
+###
+
+PUT http://127.0.0.1:8080/customers/new
+Authorization: Basic {{username}} {{password}}
+Content-Type: application/json
+
+{
+  "firstName": "Lyle",
+  "lastName": "Lovett",
+  "birthday": "1957-11-01",
+  "email" : "lovett@example.com",
+  "username" : "llovett",
+  "zipcode" : 77379
+}
+
+###
+
+PUT http://127.0.0.1:8080/customers/new
+Content-Type: application/json
+
+{
+  "firstName": "Taylor",
+  "lastName": "Swift",
+  "birthday": "1989-12-13",
+  "email" : "tswift@example.com",
+  "username" : "tswift",
+  "zipcode" : 19602
+}
+
+###
+
+PUT http://127.0.0.1:8080/customers/new
+Content-Type: application/json
+
+{
+  "firstName": "Ron",
+  "lastName": "Howard",
+  "birthday": "1954-03-01",
+  "email" : "ron@example.com",
+  "username" : "rhoward",
+  "zipcode" : 73534
+}
+
+###
+
+PUT http://127.0.0.1:8080/customers/new
+Content-Type: application/json
+
+{
+  "firstName": "James",
+  "lastName": "Marsden",
+  "birthday": "1973-09-18",
+  "email" : "marsden@example.com",
+  "username" : "jmarsden",
+  "zipcode" : 74076
+}
+
+###
+
+PUT http://127.0.0.1:8080/customers/new
+Content-Type: application/json
+
+{
+  "firstName": "Katy",
+  "lastName": "Perry",
+  "birthday": "1984-10-25",
+  "email" : "kp@example.com",
+  "username" : "kperry",
+  "zipcode" : 90048
+}
+
+###
+
+PUT http://127.0.0.1:8080/customers/new
+Content-Type: application/json
+
+{
+  "firstName": "Russel",
+  "lastName": "Brand",
+  "birthday": "1975-06-04",
+  "email" : "rbrnad@example.com",
+  "username" : "rbrandt",
+  "zipcode" : 90048
+}
+
+###
+
+PUT http://127.0.0.1:8080/customers/new
+Content-Type: application/json
+
+{
+  "firstName": "Melissa",
+  "lastName": "McCarthy",
+  "birthday": "1970-08-26",
+  "email" : "mmc@example.com",
+  "username" : "mmccarthy",
+  "zipcode" : 90048
+}
+
+###

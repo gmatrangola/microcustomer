@@ -1,0 +1,108 @@
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection).
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET request with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
+
+GET http://localhost:8080/makeCustomer?email=geoff@matrangola.com
+Accept: application/json
+
+###
+
+GET http://localhost:8080/customers/new?email=geoff@matrangola.com&lastName=Matrangola&firstName=Geoff
+Accept: application/json
+
+###
+
+GET http://localhost:8080/makeCustomer
+Accept: application/json
+
+###
+
+PUT http://127.0.0.1:8081/customers/new
+content-type: application/json
+
+{
+  "firstName": "Tom",
+  "lastName": "Smith",
+  "birthday": "1991-04-02",
+  "email" : "ts@example.com"
+
+}
+
+###
+
+PUT http://127.0.0.1:8081/customers/new
+Authorization: Basic {{username}} {{password}}
+content-type: application/json
+
+{
+  "firstName": "Bob",
+  "lastName": "Smith",
+  "birthday": "1991-04-02",
+  "email" : "bobs@example.com",
+  "zipcode" : "73534"
+
+}
+
+###
+
+GET http://localhost:8080/customers/
+Authorization: Basic {{username}} {{password}}
+Accept: application/json
+
+###
+
+GET http://localhost:8080/customers/whoami
+Authorization: Basic {{username}} {{password}}
+Accept: application/json
+
+###
+
+GET http://localhost:8080/customers/customer?email=bobs@example.com
+Accept: application/json
+
+###
+
+GET http://localhost:8080/customers/customer?email=ts@example.com
+Accept: application/json
+
+###
+
+GET http://localhost:8080/customers/customer/92c720e3-b9d4-4987-a791-2bb9e6f66d4d
+Accept: application/json
+
+###
+
+GET http://localhost:8080/customers/zipcode/73534
+Accept: application/json
+
+###
+
+GET http://localhost:8080/indicators/average?indicatorCode=IP.PAT.RESD
+Accept: application/json
+
+###
+
+GET http://localhost:8080/indicators/aboveAvg?code=IP.PAT.RESD
+Accept: application/json
+
+###
+
+GET http://localhost:8080/indicators/aboveAvg?code=IP.PAT.RESD
+Authorization: Basic {{username}} {{password}}
+Accept: application/json
+
+###
+
+
+GET http://localhost:8080/indicators/USA/IP.PAT.RESD/idx?email=ts@example.com
+Accept: application/json
+
+###
+
+GET http://localhost:8080/indicators/USA/IP.PAT.RESD/idx?email=xx@example.com
+Accept: application/json
+
+###

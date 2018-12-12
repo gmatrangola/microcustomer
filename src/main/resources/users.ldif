@@ -1,0 +1,41 @@
+dn: ou=groups,dc=matrangola,dc=com
+objectclass: top
+objectclass: organizationalUnit
+ou: groups
+
+dn: ou=people,dc=matrangola,dc=com
+objectclass: top
+objectclass: organizationalUnit
+ou: people
+
+dn: uid=tsmith,ou=people,dc=matrangola,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Tom Smith
+sn: Smith
+uid: tsmith
+userPassword: password
+
+dn: uid=bsmith,ou=people,dc=matrangola,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Bob Smith
+sn: Smith
+uid: bsmith
+userPassword: password
+
+dn: cn=admin,ou=groups,dc=matrangola,dc=com
+objectclass: top
+objectclass: groupOfNames
+cn: admin
+member: uid=tsmith,ou=people,dc=matrangola,dc=com
+
+dn: cn=user,ou=groups,dc=matrangola,dc=com
+objectclass: top
+objectclass: groupOfNames
+cn: user
+member: uid=matrangola,ou=people,dc=matrangola,dc=com
