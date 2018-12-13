@@ -2,6 +2,7 @@ package com.matrangola.microcustomer.controller;
 
 import com.matrangola.microcustomer.aop.Profile;
 import com.matrangola.microcustomer.data.model.Customer;
+import com.matrangola.microcustomer.data.model.Request;
 import com.matrangola.microcustomer.data.repository.CustomerRepository;
 import com.matrangola.microcustomer.validation.ResourceException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 import java.security.Principal;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -106,6 +108,17 @@ public class CustomerController {
         sb.append("userDetails.getUsername() = ")
                 .append(userDetails.getUsername()).append("\n");
         return sb.toString();
+    }
+
+    @RequestMapping(method = RequestMethod.GET, path = "/customers/logAccess/{username}")
+    boolean logAccess(@PathVariable String username, @RequestParam String countryCode, @RequestParam String indexCode) {
+        Request request = new Request(countryCode, indexCode);
+        Optional<Customer> customer = customerRepository.findCustomerByEmail(username);
+        if (!customer.isPresent()) return false;
+        else {
+            customer.get().getHistory().put(new Date(), request);
+            return true;
+        }
     }
 
 
