@@ -5,7 +5,7 @@
 # * 'ptr' and 'ptrp' create a POST logRequest with a simple or parameter-like body;
 # * 'mptr' and 'fptr' create a POST logRequest to submit a form with a text or file field (multipart/form-data);
 
-PUT http://127.0.0.1:8080/customers/new
+PUT http://127.0.0.1:8081/customers/new
 Authorization: Basic {{username}} {{password}}
 Content-Type: application/json
 
@@ -21,7 +21,7 @@ Content-Type: application/json
 
 ###
 
-PUT http://127.0.0.1:8080/customers/new
+PUT http://127.0.0.1:8081/customers/new
 Authorization: Basic {{username}} {{password}}
 Content-Type: application/json
 
@@ -36,7 +36,7 @@ Content-Type: application/json
 
 ###
 
-PUT http://127.0.0.1:8080/customers/new
+PUT http://127.0.0.1:8081/customers/new
 Content-Type: application/json
 
 {
@@ -50,7 +50,7 @@ Content-Type: application/json
 
 ###
 
-PUT http://127.0.0.1:8080/customers/new
+PUT http://127.0.0.1:8081/customers/new
 Content-Type: application/json
 
 {
@@ -64,7 +64,7 @@ Content-Type: application/json
 
 ###
 
-PUT http://127.0.0.1:8080/customers/new
+PUT http://127.0.0.1:8081/customers/new
 Content-Type: application/json
 
 {
@@ -78,7 +78,7 @@ Content-Type: application/json
 
 ###
 
-PUT http://127.0.0.1:8080/customers/new
+PUT http://127.0.0.1:8081/customers/new
 Content-Type: application/json
 
 {
@@ -92,7 +92,7 @@ Content-Type: application/json
 
 ###
 
-PUT http://127.0.0.1:8080/customers/new
+PUT http://127.0.0.1:8081/customers/new
 Content-Type: application/json
 
 {
@@ -106,7 +106,7 @@ Content-Type: application/json
 
 ###
 
-PUT http://127.0.0.1:8080/customers/new
+PUT http://127.0.0.1:8081/customers/new
 Content-Type: application/json
 
 {

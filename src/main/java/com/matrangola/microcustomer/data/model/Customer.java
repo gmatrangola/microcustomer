@@ -33,6 +33,8 @@ public class Customer {
     private Date birthday;
     @Indexed
     private int zipcode;
+    @Indexed
+    private String username;
 
     Map<Date, Request> history;
 }

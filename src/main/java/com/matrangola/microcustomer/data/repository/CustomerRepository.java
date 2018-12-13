@@ -10,4 +10,5 @@ import java.util.UUID;
 public interface CustomerRepository extends CassandraRepository<Customer, UUID> {
     List<Customer> findCustomersByZipcode(int zipcode);
     Optional<Customer> findCustomerByEmail(String email);
+    Optional<Customer> findCustomerByUsername(String username);
 }

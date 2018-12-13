@@ -113,7 +113,7 @@ public class CustomerController {
     @RequestMapping(method = RequestMethod.GET, path = "/customers/logAccess/{username}")
     boolean logAccess(@PathVariable String username, @RequestParam String countryCode, @RequestParam String indexCode) {
         Request request = new Request(countryCode, indexCode);
-        Optional<Customer> customer = customerRepository.findCustomerByEmail(username);
+        Optional<Customer> customer = customerRepository.findCustomerByUsername(username);
         if (!customer.isPresent()) return false;
         else {
             customer.get().getHistory().put(new Date(), request);
